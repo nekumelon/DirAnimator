@@ -24,7 +24,7 @@
 			"properties": {
 				"DirAnimator.outputDirectory": {
 					"type": "string",
-					"default": "C:/Users/nekum/.vscode/DirAnimator/output",
+					"default": "C:/Users/USER/.vscode/DirAnimator/output",
 					"description": "The directory to save and play the animation from."
 				},
 				"DirAnimator.newCharacterDelay": {
