@@ -1,0 +1,120 @@
+{
+	"name": "dir-animator",
+	"displayName": "DirAnimator",
+	"description": "Animate directories. Yeah that's kinda it.",
+	"publisher": "nekumelon",
+	"version": "1.0.0",
+	"icon": "icon.png",
+	"author": {
+		"name": "nekumelon"
+	},
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:DirAnimator.animate"
+	],
+	"main": "extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "DirAnimator",
+			"properties": {
+				"DirAnimator.outputDirectory": {
+					"type": "string",
+					"default": "C:/Users/nekum/.vscode/DirAnimator/output",
+					"description": "The directory to save and play the animation from."
+				},
+				"DirAnimator.newCharacterDelay": {
+					"type": "number",
+					"default": 1,
+					"description": "The delay before typing a new character"
+				},
+				"DirAnimator.ignoreList": {
+					"type": "array",
+					"default": [
+						"node_modules",
+						"package-lock.json"
+					],
+					"description": "The list of file and folder names to ignore"
+				},
+				"DirAnimator.allowedExtensions": {
+					"type": "array",
+					"default": [
+						".go",
+						".js",
+						".json",
+						".md",
+						".c",
+						".py",
+						".cpp",
+						".lua",
+						".r",
+						".ts",
+						".mod",
+						".cs",
+						".h",
+						".sh",
+						".cmd",
+						".html",
+						".css",
+						".htm",
+						".pl",
+						".php",
+						".xml",
+						".asm",
+						".ahk",
+						".bat",
+						".b",
+						".bf",
+						".c++",
+						".cp",
+						".h++",
+						".hpp",
+						".cmake",
+						".coffee",
+						".cr",
+						".cu",
+						".cuh",
+						".as",
+						".jl",
+						".m",
+						".mk",
+						".numpy",
+						".ninja",
+						".pas",
+						".ps1",
+						".ruby",
+						".ru"
+					],
+					"description": "The allowed extension types of files to animate"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "DirAnimator.animate",
+				"category": "Animate",
+				"icon": "$(play-circle)",
+				"title": "Animate directory"
+			}
+		]
+	},
+	"scripts": {},
+	"devDependencies": {
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "^13.11.0",
+		"@types/vscode": "^1.63.0",
+		"@vscode/test-electron": "^1.6.2",
+		"eslint": "^8.1.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nekumelon/DirAnimator.git"
+	}
+}
